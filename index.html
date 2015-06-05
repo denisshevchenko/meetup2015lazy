@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
     <head>
         <meta charset="utf-8">
 
-        <title>reveal.js - The HTML Presentation Framework</title>
+        <title>Ленивые вычисления: плюсы и минусы</title>
 
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="Доклад о ленивых вычислениях на встрече сообщества ruHaskell, 21 июня 2015 года.">
+        <meta name="author" content="Денис Шевченко">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
         <link rel="stylesheet" href="css/own.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -46,15 +47,53 @@
                     <h3>плюсы и минусы</h3>
                     <div class="meetup-mark">
                         Встреча сообщества <strong><span style="color: #ff3c26;">ru</span>Haskell</strong><br/>
-                        21 июня 2015 год
+                        21 июня 2015 года
+                    </div>
+                </section>
+                
+                <section data-background="#C63D0F" data-background-transition="zoom">
+                    <h2 class="part-conception-title">Qui est qui</h2>
+                    <div class="part-conception-mark">
+                        <i class="fa fa-question-circle"></i>
                     </div>
                 </section>
 
                 <section>
                     <h2>Haskell &mdash; ленивый язык</h2>
+                    <p class="fragment">все вычисления в нём по умолчанию ленивы</p>
                 </section>
 
+                <section>
+                    <h2>Что такое<br/> <span class="fragment highlight-red">ленивые</span> <span class="fragment highlight-red">вычисления</span>?</h2>
+                </section>
+
+                <section>
+                    <h2>Принцип лени</h2>
+                    <p class="fragment"><span class="fragment highlight-red">Работа</span> выполняется лишь тогда,<br/>когда её результат кому-то понадобился.</p>
+                </section>
+
+                <section>
+                    <h2>Работа &mdash; это вычисления</h2>
+                    <p class="fragment"><span class="fragment highlight-red">Работа</span> выполняется лишь тогда,<br/>когда её результат кому-то понадобился.</p>
+                </section>
+
+                <!--
+                <section>
+                    <section>
+                        <h2>Fragment Styles</h2>
+                        <p>There's different types of fragments, like:</p>
+                        <p class="fragment grow">grow</p>
+                        <p class="fragment shrink">shrink</p>
+                        <p class="fragment fade-out">fade-out</p>
+                        <p class="fragment current-visible">current-visible</p>
+                        <p class="fragment highlight-red">highlight-red</p>
+                        <p class="fragment highlight-blue">highlight-blue</p>
+                    </section>
+                </section>
+                -->
+
                 <!-- Example of nested vertical slides -->
+                <!--
                 <section>
                     <section>
                         <h2>Vertical Slides</h2>
@@ -78,14 +117,8 @@
                         </a>
                     </section>
                 </section>
-
-                <section>
-                    <h2>Slides</h2>
-                    <p>
-                        Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-                    </p>
-                </section>
-
+                -->
+                <!--
                 <section>
                     <h2>Point of View</h2>
                     <p>
@@ -95,14 +128,17 @@
                         Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
                     </p>
                 </section>
-
+                -->
+                <!--
                 <section>
                     <h2>Touch Optimized</h2>
                     <p>
                         Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
                     </p>
                 </section>
+                -->
 
+                <!--
                 <section data-markdown>
                     <script type="text/template">
                         ## Markdown support
@@ -120,30 +156,8 @@
                         ```
                     </script>
                 </section>
-
-                <section>
-                    <section id="fragments">
-                        <h2>Fragments</h2>
-                        <p>Hit the next arrow...</p>
-                        <p class="fragment">... to step through ...</p>
-                        <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-                        <aside class="notes">
-                            This slide has fragments which are also stepped through in the notes window.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's different types of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment current-visible">current-visible</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                    </section>
-                </section>
-
+                -->
+                <!--
                 <section id="transitions">
                     <h2>Transition Styles</h2>
                     <p>
@@ -156,12 +170,12 @@
                         <a href="?transition=zoom#/transitions">Zoom</a>
                     </p>
                 </section>
-
+                -->
+                <!--
                 <section id="themes">
                     <h2>Themes</h2>
                     <p>
                         reveal.js comes with a few themes built in: <br>
-                        <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
                         <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
                         <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
                         <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
@@ -175,6 +189,7 @@
                         <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
                     </p>
                 </section>
+                -->
 
                 <section>
                     <section data-background="#dddddd">
@@ -223,21 +238,9 @@
 
                 <section>
                     <h2>Pretty Code</h2>
-                    <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+                    <pre><code class="haskell src-code" data-trim contenteditable>
+main :: IO ()
+main = putStrLn ""
                     </code></pre>
                     <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
                 </section>
@@ -366,12 +369,11 @@ Reveal.addEventListener( 'customevent', function() {
                     </ul>
                 </section>
 
-                <section style="text-align: left;">
-                    <h1>THE END</h1>
-                    <p>
-                        - <a href="http://slides.com">Try the online editor</a> <br>
-                        - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-                    </p>
+                <section>
+                    <h4>Денис Шевченко</h4>
+                    <div class="meetup-mark">
+                        <a href="http://dshevchenko.biz" target="_blank"><i class="fa fa-external-link"></i> <span class="my-site">dshevchenko.biz</span></a>
+                    </div>
                 </section>
 
             </div>
