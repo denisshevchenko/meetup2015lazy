@@ -86,9 +86,18 @@
     font-size: 90px !important;
 }
 
+.calculator-mark {
+    color: #224DD9 !important;
+    font-size: 180px !important;
+}
+
 .intro-quote {
     font-size: 52px !important;
     font-style: italic !important;
     padding-bottom: 30px !important;
+}
+
+.big-text {
+    font-size: 46px !important;
 }
 
