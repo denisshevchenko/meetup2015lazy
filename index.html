@@ -50,7 +50,14 @@
                         21 июня 2015 года
                     </div>
                 </section>
-                
+
+                <section>
+                    <div class="intro-quote">
+                        <span style="color: #bbb;"><i class="fa fa-quote-right"></i></span> Лучше ничем не заниматься,<br/> чем заниматься ничем.
+                    </div>
+                    Тацит
+                </section>
+
                 <section data-background="#C63D0F" data-background-transition="zoom">
                     <h2 class="part-conception-title">Qui est qui</h2>
                     <div class="part-conception-mark">
@@ -295,25 +302,13 @@ main = putStrLn ""
                 </section>
 
                 <section>
-                    <h2>Clever Quotes</h2>
-                    <p>
-                        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-                    </p>
-                    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-                        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-                    </blockquote>
-                </section>
-
-                <section>
                     <h2>Intergalactic Interconnections</h2>
                     <p>
                         You can link between slides internally,
                         <a href="#/2/3">like this</a>.
                     </p>
                 </section>
-
+                <!--
                 <section>
                     <h2>Speaker View</h2>
                     <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
@@ -323,13 +318,15 @@ main = putStrLn ""
                         Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
                     </aside>
                 </section>
-
+                -->
+                <!--
                 <section>
                     <h2>Export to PDF</h2>
                     <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
                     <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
                 </section>
-
+                -->
+                <!--
                 <section>
                     <h2>Global State</h2>
                     <p>
@@ -338,7 +335,8 @@ main = putStrLn ""
                         apply broader style changes, like switching the page background.
                     </p>
                 </section>
-
+                -->
+                <!--
                 <section data-state="customevent">
                     <h2>State Events</h2>
                     <p>
@@ -350,14 +348,17 @@ Reveal.addEventListener( 'customevent', function() {
 } );
                     </code></pre>
                 </section>
-
+                -->
+                <!--
                 <section>
                     <h2>Take a Moment</h2>
                     <p>
                         Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
                     </p>
                 </section>
+                -->
 
+                <!--
                 <section>
                     <h2>Much more</h2>
                     <ul>
@@ -368,6 +369,7 @@ Reveal.addEventListener( 'customevent', function() {
                         <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
                     </ul>
                 </section>
+                -->
 
                 <section>
                     <h4>Денис Шевченко</h4>
@@ -398,8 +400,8 @@ Reveal.addEventListener( 'customevent', function() {
                 // Optional reveal.js plugins
                 dependencies: [
                     { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    // { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'plugin/zoom-js/zoom.js', async: true },
                     { src: 'plugin/notes/notes.js', async: true }
