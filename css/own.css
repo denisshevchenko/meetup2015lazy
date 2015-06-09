@@ -57,9 +57,25 @@
     padding: 15px;
 }
 
-.src-code {
-    font-size: 28px !important;
+.src-code-big {
+    font-size: 48px !important;
     font-family: 'Menlo', monospace !important;
+    padding-bottom: 30px !important;
+}
+
+.src-code-big-aligned {
+    text-align: left !important;
+    font-size: 48px !important;
+    font-family: 'Menlo', monospace !important;
+    padding-bottom: 30px !important;
+}
+
+.src-code-number {
+    color: #2EB3BA !important;
+}
+
+.src-code-text {
+    color: #E1251C !important;
 }
 
 .my-site {
