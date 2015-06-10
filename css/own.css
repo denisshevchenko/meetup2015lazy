@@ -6,6 +6,7 @@
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     color: #4F5F64;
     font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
 }
 
 .reveal h1 {
@@ -54,20 +55,28 @@
 }
 
 .reveal pre code {
-    padding: 15px;
+    font-size: 42px;
+    line-height: 110%;
+    font-family: 'Menlo', monospace !important;
+    padding: 25px;
 }
 
 .src-code-big {
-    font-size: 48px !important;
+    font-size: 52px !important;
     font-family: 'Menlo', monospace !important;
     padding-bottom: 30px !important;
 }
 
 .src-code-big-aligned {
     text-align: left !important;
-    font-size: 48px !important;
+    font-size: 42px !important;
     font-family: 'Menlo', monospace !important;
-    padding-bottom: 30px !important;
+    border: 1px solid #002b35 !important;
+    border-radius: 5px !important;
+    background-color: #002b35 !important;
+    padding: 20px !important;
+    color: #11a198 !important;
+    /* padding-bottom: 30px !important; */
 }
 
 .src-code-number {
@@ -79,7 +88,7 @@
 }
 
 .my-site {
-    font-family: 'Andale Mono', monospace !important;
+    font-family: 'Menlo', monospace !important;
 }
 
 .reveal .controls {
@@ -108,12 +117,27 @@
 }
 
 .intro-quote {
-    font-size: 52px !important;
+    font-size: 56px !important;
     font-style: italic !important;
     padding-bottom: 30px !important;
 }
 
 .big-text {
+    color: #4F5F64 !important;
     font-size: 46px !important;
+}
+
+.medium-text {
+    color: #4F5F64 !important;
+    font-size: 38px !important;
+}
+
+.small-text {
+    color: #4F5F64 !important;
+    font-size: 30px !important;
+}
+
+.red-text {
+    color: #ff2634 !important;
 }
 
