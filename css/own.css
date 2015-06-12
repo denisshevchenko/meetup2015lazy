@@ -4,18 +4,18 @@
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-    color: #4F5F64;
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
 }
 
 .reveal h1 {
     font-size: 3.4em;
+    color: #ff3c26;
 }
 
 .meetup-mark {
     font-size: 32px !important;
-    padding-top: 30px !important;
+    padding-top: 50px !important;
 }
 
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
@@ -117,9 +117,9 @@
 }
 
 .intro-quote {
-    font-size: 56px !important;
-    font-style: italic !important;
+    font-size: 86px !important;
     padding-bottom: 30px !important;
+    font-family: 'Savoye LET', 'PT Sans' !important;
 }
 
 .big-text {
