@@ -51,12 +51,16 @@
                     </div>
                 </section>
 
+                <!-- Концептуальная цитата -->
+
                 <section>
                     <div class="intro-quote">
                         <span style="color: #bbb;"><i class="fa fa-quote-right"></i></span> Лучше ничем не заниматься,<br/> чем заниматься ничем.
                     </div>
                     Тацит
                 </section>
+
+                <!-- Определяемся с понятиями... -->
 
                 <section data-background="#ff3c26" data-background-transition="zoom">
                     <h2 class="part-conception-title">Qui est qui</h2>
@@ -67,7 +71,7 @@
 
                 <section>
                     <h3>Haskell-программа &mdash;</h3>
-                    <div class="fragment big-text">совокупность <span class="red-text">выражений.</span></div>
+                    <div class="big-text">совокупность <span class="red-text">выражений.</span></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">expression</span>/</div>
                 </section>
 
@@ -105,13 +109,13 @@ head [15, 2, 6]
 
                 <section>
                     <h3>Запуск Haskell-программы &mdash;</h3>
-                    <div class="fragment big-text">начало <span class="red-text">выполнения</span> всех её выражений.</div>
+                    <div class="big-text">начало <span class="red-text">выполнения</span> всех её выражений.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span>/</div>
                 </section>
 
                 <section>
                     <h3><span class="red-text">Выполнение</span>,</h3>
-                    <h3 class="fragment">а не вычисление</h3>
+                    <h3>а не вычисление</h3>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span> <span class="small-text">vs</span> calculation/</div>
                 </section>
 
@@ -138,13 +142,13 @@ let repoPath = "/home/dsh" &lt;/&gt;
 
                 <section>
                     <h3>Выполнить выражение &mdash;</h3>
-                    <div class="fragment big-text">значит <span class="red-text">сократить</span> его.</div>
+                    <div class="big-text">значит <span class="red-text">сократить</span> его.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reduce</span>/</div>
                 </section>
 
                 <section>
                     <h3>В основе сокращения &mdash;</h3>
-                    <div class="fragment big-text"><span class="red-text">применение функции</span>.</div>
+                    <div class="big-text"><span class="red-text">применение функции</span>.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">function application</span>/</div>
                 </section>
 
@@ -174,15 +178,17 @@ let sum = 5
 
                 <section>
                     <h3>Если сократить нельзя &mdash;</h3>
-                    <div class="fragment big-text">выражение в <span class="red-text">нормальной форме</span>.</div>
+                    <div class="big-text">выражение в <span class="red-text">нормальной форме</span>.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">normal form</span>/</div>
                 </section>
 
                 <section>
                     <h3>Если сократить можно &mdash;</h3>
-                    <div class="fragment big-text">выражение называют <span class="red-text">сокращаемым</span>.</div>
-                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reducible expression</span> <span class="small-text">or</span> <span class="red-text">redex</span>/</div>
+                    <div class="big-text">выражение называют <span class="red-text">сокращаемым</span>.</div>
+                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reducible expression</span> <span class="small-text">или</span> <span class="red-text">redex</span>/</div>
                 </section>
+
+                <!-- Принципы лени -->
 
                 <section data-background="#ff3c26" data-background-transition="zoom">
                     <h2 class="part-conception-title">Принципы лени</h2>
@@ -192,7 +198,7 @@ let sum = 5
                 </section>
 
                 <section>
-                    <h3>№ 1</h3>
+                    <h3><span class="small-thumbs"><i class="fa fa-bed"></i></span> № 1</h3>
                     <div class="big-text">Выражение не сокращается,</br>пока этом нет необходимости.</div>
                 </section>
 
@@ -219,7 +225,7 @@ main =
                 </section>
 
                 <section>
-                    <h3>№ 2</h3>
+                    <h3><span class="small-thumbs"><i class="fa fa-bed"></i></span> № 2</h3>
                     <div class="big-text">Спускаемся лишь настолько,</br>насколько это нужно.</div>
                 </section>
 
@@ -238,6 +244,8 @@ main =
                     <span class="big-text">Три этажа</span>
                 </section>
 
+                <!-- Плюсы -->
+
                 <section data-background="#ff3c26" data-background-transition="zoom">
                     <h2 class="part-conception-title">Плюсы</h2>
                     <div class="part-conception-mark">
@@ -246,7 +254,7 @@ main =
                 </section>
 
                 <section>
-                    <h3>№ 1</h3>
+                    <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-up"></i></span> № 1</h3>
                     <h3>Рациональность</h3>
                 </section>
 
@@ -262,8 +270,42 @@ main = do
                 </section>
 
                 <section>
-                    <h3>№ 2</h3>
+                    <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-up"></i></span> № 2</h3>
                     <h3>Бесконечность</h3>
+                </section>
+
+                <section>
+                    <pre><code class="haskell src-code src-code" data-trim>
+head :: [a] -> a
+head (x:_) = x
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Возвращаем первый элемент списка</span>
+                </section>
+
+                <section>
+                    <pre><code class="haskell src-code src-code" data-trim>
+main :: IO ()
+main =
+    print $ head [1, 10, 100]
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Работаем с конечным списком...</span>
+                </section>
+
+                <section>
+                    <pre><code class="haskell src-code src-code" data-trim>
+main :: IO ()
+main =
+    print $ head [1..]
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">... или с бесконечным списком</span>
+                </section>
+
+                <section>
+                    <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-up"></i></span> № 3</h3>
+                    <h3>Модульность</h3>
                 </section>
 
 
@@ -274,9 +316,7 @@ main = do
 
 
 
-
-
-
+                <!-- Минусы -->
 
                 <section data-background="#ff3c26" data-background-transition="zoom">
                     <h2 class="part-conception-title">Минусы</h2>
@@ -285,19 +325,61 @@ main = do
                     </div>
                 </section>
 
+                <section>
+                    <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-down"></i></span> № 1</h3>
+                    <h3>Неожиданное поведение</h3>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+import Data.String.Utils
 
+main :: IO ()
+main = do
+    file <- readFile path
+    writeFile path $ replace "," ";" file
+    where path = "/home/dsh/data"
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Прочесть, заменить и переписать? Ну-ну...</span>
+                </section>
 
+                <section>
+                    <pre><code class="bash src-code src-code-small" data-trim>
+openFile: resource busy (file is locked)
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Лень мешает</span>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+import Data.String.Utils
+import qualified System.IO.Strict as S
 
+main :: IO ()
+main = do
+    file <- S.readFile path
+    writeFile path $ replace "," ";" file
+    where path = "/home/dsh/data"
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Строгость решает</span>
+                </section>
 
+                <section>
+                    <h3>Решение:</h3>
+                    <div class="big-text">Не игнорируйте слова<br/>&laquo;<strong>strictly</strong>&raquo; и &laquo;<strong>lazily</strong>&raquo;<br/>в документации.</div>
+                </section>
 
+                <!-- Проблема номер 2 -->
 
+                <section>
+                    <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-down"></i></span> № 2</h3>
+                    <h3>Space leak</h3>
+                </section>
 
-
-
-
-
+                <!-- Благодарю за внимание! -->
 
                 <section>
                     <h3>Благодарю за внимание!</h3>
