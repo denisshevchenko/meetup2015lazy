@@ -61,13 +61,13 @@
                 <section data-background="#ff3c26" data-background-transition="zoom">
                     <h2 class="part-conception-title">Qui est qui</h2>
                     <div class="part-conception-mark">
-                        <i class="fa fa-question-circle"></i>
+                        <i class="fa fa-question"></i>
                     </div>
                 </section>
 
                 <section>
-                    <h3>Haskell-программа</h3>
-                    <div class="fragment big-text">это совокупность <span class="red-text">выражений.</span></div>
+                    <h3>Haskell-программа &mdash;</h3>
+                    <div class="fragment big-text">совокупность <span class="red-text">выражений.</span></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">expression</span>/</div>
                 </section>
 
@@ -104,8 +104,8 @@ head [15, 2, 6]
                 </section>
 
                 <section>
-                    <h3>Запуск Haskell-программы</h3>
-                    <div class="fragment big-text">это начало <span class="red-text">выполнения</span> всех её выражений.</div>
+                    <h3>Запуск Haskell-программы &mdash;</h3>
+                    <div class="fragment big-text">начало <span class="red-text">выполнения</span> всех её выражений.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span>/</div>
                 </section>
 
@@ -121,7 +121,7 @@ head [15, 2, 6]
                     <pre><code class="haskell src-code" data-trim>
 let coordX = 12.3 + 0.068
                     </code></pre>
-                    <div style="padding-top: 25px;"></div>
+                    <div class="under-src-code-separator"></div>
                     <span class="big-text">Несомненно!</span>
                 </section>
 
@@ -132,135 +132,172 @@ let coordX = 12.3 + 0.068
 let repoPath = "/home/dsh" &lt;/&gt;
                "meetup2015"
                     </code></pre>
-                    <div style="padding-top: 25px;"></div>
+                    <div class="under-src-code-separator"></div>
                     <span class="big-text">Хм...</span>
                 </section>
 
                 <section>
-                    <h3>Выполнить выражение</h3>
-                    <div class="fragment big-text">значит <span class="red-text">упростить</span> его.</div>
+                    <h3>Выполнить выражение &mdash;</h3>
+                    <div class="fragment big-text">значит <span class="red-text">сократить</span> его.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reduce</span>/</div>
                 </section>
 
                 <section>
-                    <h3>В основе упрощения</h3>
-                    <div class="fragment big-text">лежит <span class="red-text">применение функции</span>.</div>
+                    <h3>В основе сокращения &mdash;</h3>
+                    <div class="fragment big-text"><span class="red-text">применение функции</span>.</div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">function application</span>/</div>
                 </section>
 
                 <section>
+                    <h3>Можно сократить</h3>
+                    <div style="padding-top: 1px;"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = 2 + 3
                     </code></pre>
                 </section>
 
                 <section>
+                    <h3>Сокращаем...</h3>
+                    <div style="padding-top: 1px;"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = (+) 2 3
                     </code></pre>
                 </section>
 
                 <section>
+                    <h3>Готово!</h3>
+                    <div style="padding-top: 1px;"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = 5
                     </code></pre>
                 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <section>
-                    <h2>Haskell &mdash; ленивый язык</h2>
-                    <div class="fragment big-text">Все вычисления по умолчанию ленивы.</div>
+                    <h3>Если сократить нельзя &mdash;</h3>
+                    <div class="fragment big-text">выражение в <span class="red-text">нормальной форме</span>.</div>
+                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">normal form</span>/</div>
                 </section>
 
                 <section>
-                    <h2>Но что такое<br/> ленивые</span> <span class="fragment highlight-red">вычисления</span>?</h2>
+                    <h3>Если сократить можно &mdash;</h3>
+                    <div class="fragment big-text">выражение называют <span class="red-text">сокращаемым</span>.</div>
+                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reducible expression</span> <span class="small-text">or</span> <span class="red-text">redex</span>/</div>
                 </section>
 
-                <section>
-                    <div class="src-code-big-aligned">
-                        <strong>let</strong> coordX = <span class="fragment highlight-red">12.3 + 0.068</span>
-                    </div>
-                    <span class="fragment big-text">Это вычисление? Несомненно.</span>
-                </section>
-
-                <section>
-                    <div class="src-code-big-aligned">
-                        <strong>let</strong> repoPath = <span class="fragment highlight-red">"/home/denis" &lt;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"meetup2015lazy"</span>
-                    </div>
-                    <span class="fragment big-text">Это вычисление? Хм...</span>
-                </section>
-
-                <section>
-                    <h2>Суть лени</h2>
-                    <div class="fragment big-text"><span class="fragment highlight-red">Вычисление</span> выполняется лишь тогда,<br/>когда его результат кому-то нужен.</div>
-                </section>
-
-                <section>
-                    <h2>Что такое вычисление?</h2>
-                </section>
-
-                <section>
-                    <div class="calculator-mark">
-                        <i class="fa fa-calculator"></i>
-                    </div>
-                    <div class="big-text">
-                        <span class="fragment">Calculation</span> <i class="fragment" style="font-size: 80%;">vs</i> <span class="fragment">Evaluation</span>
+                <section data-background="#ff3c26" data-background-transition="zoom">
+                    <h2 class="part-conception-title">Принципы лени</h2>
+                    <div class="part-conception-mark">
+                        <i class="fa fa-bed"></i>
                     </div>
                 </section>
 
-                <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+                <section>
+                    <h3>№ 1</h3>
+                    <div class="big-text">Выражение не сокращается,</br>пока этом нет необходимости.</div>
                 </section>
 
                 <section>
-                    <h2>Pretty Code</h2>
                     <pre><code class="haskell src-code" data-trim>
 main :: IO ()
-main = putStrLn "" 12.3 + 45
+main =
+    let stupid = 2 `div` 0
+    in print stupid
                     </code></pre>
-                    <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Вполне ожидаемая ошибка</span>
                 </section>
 
                 <section>
-                    <h2>Tabular Tables</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Value</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Apples</td>
-                                <td>$1</td>
-                                <td>7</td>
-                            <tr>
-                            <tr>
-                                <td>Lemonade</td>
-                                <td>$2</td>
-                                <td>18</td>
-                            <tr>
-                            <tr>
-                                <td>Bread</td>
-                                <td>$3</td>
-                                <td>2</td>
-                            <tr>
-                        </tbody>
-                    </table>
+                    <pre><code class="haskell src-code" data-trim>
+main :: IO ()
+main =
+    let stupid = 2 `div` 0
+    in putStrLn "Just exit!"
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Никакой ошибки</span>
                 </section>
+
+                <section>
+                    <h3>№ 2</h3>
+                    <div class="big-text">Спускаемся лишь настолько,</br>насколько это нужно.</div>
+                </section>
+
+                <section>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+main :: IO ()
+main =
+    let some        = ( 2 `div` 0
+                      , [2 * 3, 4 `div` 0]
+                      )
+        (_, second) = some
+        [elem1, _]  = second
+    in print elem1
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Три этажа</span>
+                </section>
+
+                <section data-background="#ff3c26" data-background-transition="zoom">
+                    <h2 class="part-conception-title">Плюсы</h2>
+                    <div class="part-conception-mark">
+                        <i class="fa fa-thumbs-o-up"></i>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>№ 1</h3>
+                    <h3>Рациональность</h3>
+                </section>
+
+                <section>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+main :: IO ()
+main = do
+    content <- readFile "/home/dsh/big.log"
+    putStrLn $ take 100 content
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Читаем только то, что нужно</span>
+                </section>
+
+                <section>
+                    <h3>№ 2</h3>
+                    <h3>Бесконечность</h3>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <section data-background="#ff3c26" data-background-transition="zoom">
+                    <h2 class="part-conception-title">Минусы</h2>
+                    <div class="part-conception-mark">
+                        <i class="fa fa-thumbs-o-down"></i>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <section>
                     <h3>Благодарю за внимание!</h3>

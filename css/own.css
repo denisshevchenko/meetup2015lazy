@@ -18,6 +18,10 @@
     padding-top: 50px !important;
 }
 
+.under-src-code-separator {
+    padding-top: 25px !important;
+}
+
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
     border-right-color: #F04F20;
 }
@@ -56,9 +60,13 @@
 
 .reveal pre code {
     font-size: 42px;
-    line-height: 110%;
+    line-height: 110% !important;
     font-family: 'Menlo', monospace !important;
     padding: 25px;
+}
+
+.src-code-small {
+    font-size: 32px !important;
 }
 
 .src-code-big {
@@ -108,7 +116,7 @@
 
 .part-conception-mark {
     color: #dedede !important;
-    font-size: 90px !important;
+    font-size: 110px !important;
 }
 
 .calculator-mark {
