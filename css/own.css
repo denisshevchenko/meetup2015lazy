@@ -132,7 +132,7 @@
 
 .big-text {
     color: #4F5F64 !important;
-    font-size: 46px !important;
+    font-size: 48px !important;
 }
 
 .medium-text {
@@ -152,5 +152,9 @@
 .small-thumbs {
     font-size: 48px !important;
     padding-right: 6px !important;
+}
+
+.english-separator {
+    padding-top: 18px !important;
 }
 

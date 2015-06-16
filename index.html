@@ -72,6 +72,7 @@
                 <section>
                     <h3>Haskell-программа &mdash;</h3>
                     <div class="big-text">совокупность <span class="red-text">выражений.</span></div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">expression</span>/</div>
                 </section>
 
@@ -110,12 +111,14 @@ head [15, 2, 6]
                 <section>
                     <h3>Запуск Haskell-программы &mdash;</h3>
                     <div class="big-text">начало <span class="red-text">выполнения</span> всех её выражений.</div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span>/</div>
                 </section>
 
                 <section>
                     <h3><span class="red-text">Выполнение</span>,</h3>
                     <h3>а не вычисление</h3>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span> <span class="small-text">vs</span> calculation/</div>
                 </section>
 
@@ -143,12 +146,14 @@ let repoPath = "/home/dsh" &lt;/&gt;
                 <section>
                     <h3>Выполнить выражение &mdash;</h3>
                     <div class="big-text">значит <span class="red-text">сократить</span> его.</div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reduce</span>/</div>
                 </section>
 
                 <section>
                     <h3>В основе сокращения &mdash;</h3>
                     <div class="big-text"><span class="red-text">применение функции</span>.</div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">function application</span>/</div>
                 </section>
 
@@ -179,12 +184,14 @@ let sum = 5
                 <section>
                     <h3>Если сократить нельзя &mdash;</h3>
                     <div class="big-text">выражение в <span class="red-text">нормальной форме</span>.</div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">normal form</span>/</div>
                 </section>
 
                 <section>
                     <h3>Если сократить можно &mdash;</h3>
                     <div class="big-text">выражение называют <span class="red-text">сокращаемым</span>.</div>
+                    <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reducible expression</span> <span class="small-text">или</span> <span class="red-text">redex</span>/</div>
                 </section>
 
@@ -305,16 +312,35 @@ main =
 
                 <section>
                     <h3><span class="small-thumbs"><i class="fa fa-thumbs-o-up"></i></span> № 3</h3>
-                    <h3>Модульность</h3>
+                    <h3>DSL</h3>
                 </section>
 
+                <section>
+                    <h3>Замена условной конструкции</h3>
+                    <div style="padding-top: 1px;"></div>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+selectBy :: Bool -> (a, a) -> a
+selectBy True  (f, _) = f
+selectBy False (_, s) = s
+                    </code></pre>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code src-code-small" data-trim>
+import System.Exit
 
-
-
-
-
-
+main :: IO ()
+main = do
+    putStrLn "Input web prefix:"
+    prefix <- getLine
+    selectBy (prefix == "https")
+             ( putStrLn "secure web :)"
+             , exitWith $ ExitFailure 1
+             )
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Честная замена</span>
+                </section>
 
                 <!-- Минусы -->
 
@@ -368,7 +394,7 @@ main = do
                 </section>
 
                 <section>
-                    <h3>Решение:</h3>
+                    <h3>Выход:</h3>
                     <div class="big-text">Не игнорируйте слова<br/>&laquo;<strong>strictly</strong>&raquo; и &laquo;<strong>lazily</strong>&raquo;<br/>в документации.</div>
                 </section>
 
