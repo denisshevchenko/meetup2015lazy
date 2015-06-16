@@ -18,6 +18,10 @@
     padding-top: 50px !important;
 }
 
+.above-src-code-separator {
+    padding-top: 1px !important;
+}
+
 .under-src-code-separator {
     padding-top: 25px !important;
 }
@@ -156,5 +160,15 @@
 
 .english-separator {
     padding-top: 18px !important;
+}
+
+.space-leak-result-separator {
+    padding-top: 25px !important;
+}
+
+.thank-you-cap {
+    font-family: 'American Typewriter', 'PT Sans' !important;
+    font-size: 60px !important;
+    color: #aaa !important;
 }
 

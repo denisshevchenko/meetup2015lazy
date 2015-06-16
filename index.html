@@ -78,7 +78,7 @@
 
                 <section>
                     <h3>Примеры выражений</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 12.3 - 1.09
                     </code></pre>
@@ -86,7 +86,7 @@
 
                 <section>
                     <h3>Примеры выражений</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 "/home/dsh" &lt;/&gt; "meetup2015"
                     </code></pre>
@@ -94,7 +94,7 @@
 
                 <section>
                     <h3>Примеры выражений</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 head [15, 2, 6]
                     </code></pre>
@@ -102,7 +102,7 @@ head [15, 2, 6]
 
                 <section>
                     <h3>Примеры выражений</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 9
                     </code></pre>
@@ -124,7 +124,7 @@ head [15, 2, 6]
 
                 <section>
                     <h3>Вычисление?</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let coordX = 12.3 + 0.068
                     </code></pre>
@@ -134,7 +134,7 @@ let coordX = 12.3 + 0.068
 
                 <section>
                     <h3>А это?</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let repoPath = "/home/dsh" &lt;/&gt;
                "meetup2015"
@@ -159,7 +159,7 @@ let repoPath = "/home/dsh" &lt;/&gt;
 
                 <section>
                     <h3>Можно сократить</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = 2 + 3
                     </code></pre>
@@ -167,7 +167,7 @@ let sum = 2 + 3
 
                 <section>
                     <h3>Сокращаем...</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = (+) 2 3
                     </code></pre>
@@ -175,7 +175,7 @@ let sum = (+) 2 3
 
                 <section>
                     <h3>Готово!</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let sum = 5
                     </code></pre>
@@ -317,7 +317,7 @@ main =
 
                 <section>
                     <h3>Замена условной конструкции</h3>
-                    <div style="padding-top: 1px;"></div>
+                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code src-code-small" data-trim>
 selectBy :: Bool -> (a, a) -> a
 selectBy True  (f, _) = f
@@ -405,26 +405,136 @@ main = do
                     <h3>Space leak</h3>
                 </section>
 
+                <section>
+                    <h3>Не путать с Memory Leak!</h3>
+                </section>
 
+                <section>
+                    <h3>Memory Leak &mdash;</h3>
+                    <div class="big-text">низкоуровневая ошибка<br/>управления памятью.</div>
+                </section>
 
+                <section>
+                    <h3>Space Leak &mdash;</h3>
+                    <div class="big-text">высокоуровневая ошибка<br/>проектирования.</div>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code" data-trim>
+main :: IO ()
+main =
+    let stupid = 2 `div` 0
+    in putStrLn "Just exit!"
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Деления не было</span>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code" data-trim>
+div 2 0
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text"><span class="red-text">Невыполненное</span> (отложенное) выражение</span>
+                    <div class="english-separator"></div>
+                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">unevaluated</span> expression <span class="small-text">или</span> thunk</span>/</div>
+                </section>
 
+                <section>
+                    <h3>Все отложенные выражения</h3>
+                    <div class="big-text">живут в памяти.</div>
+                    <div class="english-separator"></div>
+                    <div class="big-text thank-you-cap">Thank you Cap!</div>
+                </section>
 
+                <section>
+                    <h3>Проблема в их количестве!</h3>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code-small" data-trim>
+main :: IO ()
+main =
+    let v = f [1..3] (0 :: Int)
+    in print v
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Результат:</span>
+                    <div class="space-leak-result-separator"></div>
+                    <pre><code class="bash src-code-small" data-trim>
+3
+                    </code></pre>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code-small" data-trim>
+f :: Num b => [a] -> b -> b
+f []     c = c
+f (_:xs) c = f xs $ c + 1
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Пустышка с большой проблемой</span>
+                </section>
 
+                <section>
+                    <pre><code class="bash src-code-small" data-trim>
+&nbsp;   f  [1,2,3]   0
+->  f  1:[2,3]   0 + 1
+->  f  1:2:[3]   (0 + 1) + 1
+->  f  1:2:3:[]  ((0 + 1) + 1) + 1
+->  f  []        ((0 + 1) + 1) + 1
+->  3
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Работа откладывается до последнего</span>
+                </section>
 
+                <section>
+                    <h3>Ленивый вариант</h3>
+                    <div class="above-src-code-separator"></div>
+                    <pre><code class="haskell src-code-small" data-trim>
+main :: IO ()
+main =
+    let v = f [1..50000000] (0 :: Integer)
+    in print v
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div style="text-align: left !important; padding-left: 45px;">
+                        <span class="fragment big-text">Время выполнения: <span class="red-text">62 с</span></span>
+                    <div class="english-separator"></div>
+                    <span class="fragment big-text">Занимаемая память: <span class="red-text">6.19 ГБ</span></span>
+                </section>
 
+                <section>
+                    <pre><code class="haskell src-code-small" data-trim>
+f :: Num b => [a] -> b -> b
+f []     c = c
+f (_:xs) c = f xs $! c + 1
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <span class="big-text">Пустышка без проблем</span>
+                </section>
 
+                <section>
+                    <h3>Строгий вариант</h3>
+                    <div class="above-src-code-separator"></div>
+                    <pre><code class="haskell src-code-small" data-trim>
+main :: IO ()
+main =
+    let v = f [1..50000000] (0 :: Integer)
+    in print v
+                    </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div style="text-align: left !important; padding-left: 45px;">
+                        <span class="fragment big-text">Время выполнения: <span class="red-text">4 с</span></span>
+                    <div class="english-separator"></div>
+                    <span class="fragment big-text">Занимаемая память: <span class="red-text">мизерная</span></span>
+                </section>
 
-
-
-
-
-
-
-
+                <section>
+                    <h3>Выход:</h3>
+                    <div class="big-text">Если код <span class="red-text">может</span> раздуться в памяти &mdash;<br/>разбавьте лень строгостью.</div>
+                </section>
 
                 <!-- Благодарю за внимание! -->
 
