@@ -119,8 +119,16 @@
     font-family: 'Menlo', monospace !important;
 }
 
-.reveal .controls {
+.reveal .navigate-up {
     display: none !important;
+}
+
+.reveal .navigate-down {
+    display: none !important;
+}
+
+.reveal .controls {
+    /* display: none !important; */
 }
 
 /*
@@ -219,5 +227,23 @@
 .text-left {
     text-align: left !important;
     padding-left: 44px !important;
+}
+
+.start-tip {
+    font-size: 20px !important;
+    text-align: center !important;
+}
+
+.key {
+    border: 1px solid #888 !important;
+    border-radius: 4px !important;
+    background-color: #999 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-family: 'Menlo'. monospace !important;
+    color: #eee !important;
+    font-size: 90% !important;
 }
 
