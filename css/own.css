@@ -13,6 +13,11 @@
     color: #ff3c26;
 }
 
+.reveal h3 {
+    text-transform: none !important;
+    font-weight: normal !important;
+}
+
 .meetup-mark {
     font-size: 32px !important;
     padding-top: 50px !important;
@@ -100,6 +105,7 @@
 }
 
 .my-site {
+    font-size: 34px !important;
     font-family: 'Menlo', monospace !important;
 }
 
@@ -120,7 +126,7 @@
 
 .part-conception-mark {
     color: #dedede !important;
-    font-size: 110px !important;
+    font-size: 130px !important;
 }
 
 .calculator-mark {
@@ -129,7 +135,7 @@
 }
 
 .intro-quote {
-    font-size: 86px !important;
+    font-size: 90px !important;
     padding-bottom: 30px !important;
     font-family: 'Savoye LET', 'PT Sans' !important;
 }
@@ -170,5 +176,31 @@
     font-family: 'American Typewriter', 'PT Sans' !important;
     font-size: 60px !important;
     color: #aaa !important;
+}
+
+.stat-clock-icon {
+    color: #888 !important;
+    padding-right: 14px !important;
+}
+
+.stat-memory-icon {
+    color: #888 !important;
+}
+
+.stat-wrapper {
+    text-align: left !important;
+    padding-left: 45px !important;
+}
+
+.lazy-color {
+    color: #53777A !important;
+}
+
+.plus-color {
+    color: #CC333F !important;
+}
+
+.minus-color {
+    color: #542437 !important;
 }
 
