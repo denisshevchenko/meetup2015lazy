@@ -501,7 +501,7 @@ main =
                     <pre><code class="haskell src-code-small" data-trim>
 f' :: Num b => [a] -> b -> b
 f' []     c = c
-f' (_:xs) c = f xs $! c + 1
+f' (_:xs) c = f' xs $! c + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
                     <div class="big-text text-left">Пустышка без проблем</div>
