@@ -55,9 +55,9 @@
 
                 <section>
                     <div class="intro-quote">
-                        <span style="color: #bbb;"><i class="fa fa-quote-right"></i></span> Лучше ничем не заниматься,<br/> чем заниматься ничем.
+                        <span style="color: #bbb;"><i class="fa fa-quote-right"></i></span>&nbsp;&nbsp;Лучше ничем не заниматься,<br/><span style="padding-left: 110px;"></span> чем заниматься ничем.
                     </div>
-                    <span class="big-text" style="color: #aaa !important;">Тацит</span>
+                    <div class="medium-text" style="color: #999 !important; text-align: left; padding-left: 190px;">Тацит</div>
                 </section>
 
                 <!-- Определяемся с понятиями... -->
@@ -77,35 +77,35 @@
                 </section>
 
                 <section>
-                    <h3>Примеры выражений</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 12.3 - 1.09
                     </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div class="big-text text-left">Это выражение</div>
                 </section>
 
                 <section>
-                    <h3>Примеры выражений</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 "/home/dsh" &lt;/&gt; "meetup2015"
                     </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div class="big-text text-left">И это</div>
                 </section>
 
                 <section>
-                    <h3>Примеры выражений</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 head [15, 2, 6]
                     </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div class="big-text text-left">И это</div>
                 </section>
 
                 <section>
-                    <h3>Примеры выражений</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 9
                     </code></pre>
+                    <div class="under-src-code-separator"></div>
+                    <div class="big-text text-left">И даже это!</div>
                 </section>
 
                 <section>
@@ -123,24 +123,20 @@ head [15, 2, 6]
                 </section>
 
                 <section>
-                    <h3>Вычисление?</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let coordX = 12.3 + 0.068
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Несомненно!</span>
+                    <div class="big-text text-left">Вычисление? Несомненно!</div>
                 </section>
 
                 <section>
-                    <h3>А это?</h3>
-                    <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code" data-trim>
 let repoPath = "/home/dsh" &lt;/&gt;
                "meetup2015"
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Хм...</span>
+                    <div class="big-text text-left">А это? Хм&hellip;</div>
                 </section>
 
                 <section>
@@ -162,7 +158,7 @@ let repoPath = "/home/dsh" &lt;/&gt;
 let sum = 2 + 3
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Можно сократить</span>
+                    <div class="big-text text-left">Можно сократить</div>
                 </section>
 
                 <section>
@@ -170,7 +166,7 @@ let sum = 2 + 3
 let sum = (+) 2 3
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Сокращаем...</span>
+                    <div class="big-text text-left">Сокращаем&hellip;</div>
                 </section>
 
                 <section>
@@ -178,7 +174,7 @@ let sum = (+) 2 3
 let sum = 5
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Готово</span>
+                    <div class="big-text text-left">Готово</div>
                 </section>
 
                 <section>
@@ -217,7 +213,7 @@ main =
     in print stupid
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Вполне ожидаемая ошибка</span>
+                    <div class="big-text text-left">Вполне ожидаемая ошибка</div>
                 </section>
 
                 <section>
@@ -228,7 +224,7 @@ main =
     in putStrLn "Just exit!"
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Никакой ошибки</span>
+                    <div class="big-text text-left">Никакой ошибки</div>
                 </section>
 
                 <section>
@@ -248,7 +244,7 @@ main =
     in print elem1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Ленивый лифт</span>
+                    <div class="big-text text-left">Ленивый лифт</div>
                 </section>
 
                 <!-- Плюсы -->
@@ -273,7 +269,7 @@ main = do
     putStrLn $ take 100 file
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Читаем лишь то, что нужно</span>
+                    <div class="big-text text-left">Читаем лишь то, что нужно</div>
                 </section>
 
                 <section>
@@ -287,7 +283,7 @@ head :: [a] -> a
 head (x:_) = x
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Возвращаем первый элемент списка</span>
+                    <div class="big-text text-left">Возвращаем первый элемент списка</div>
                 </section>
 
                 <section>
@@ -297,7 +293,7 @@ main =
     print $ head [1, 10, 100]
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Причём как конечного списка...</span>
+                    <div class="big-text text-left">Причём как конечного списка&hellip;</div>
                 </section>
 
                 <section>
@@ -307,7 +303,7 @@ main =
     print $ head [1..]
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">... так и бесконечного</span>
+                    <div class="big-text text-left">&hellip; так и бесконечного</div>
                 </section>
 
                 <section>
@@ -322,7 +318,7 @@ selectBy True  (f, _) = f
 selectBy False (_, s) = s
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Замена условной конструкции</span>
+                    <div class="big-text text-left">Замена условной конструкции</div>
                 </section>
 
                 <section>
@@ -339,7 +335,7 @@ main = do
              )
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">И это честная замена!</span>
+                    <div class="big-text text-left">И это честная замена!</div>
                 </section>
 
                 <!-- Минусы -->
@@ -367,7 +363,7 @@ main = do
     where path = "/home/dsh/data"
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Прочесть, заменить и переписать? Ну-ну...</span>
+                    <div class="big-text text-left">Ну-ну&hellip;</div>
                 </section>
 
                 <section>
@@ -375,7 +371,7 @@ main = do
 openFile: resource busy (file is locked)
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Лень мешает</span>
+                    <div class="big-text text-left">Лень мешает</div>
                 </section>
 
                 <section>
@@ -390,7 +386,7 @@ main = do
     where path = "/home/dsh/data"
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Строгость решает</span>
+                    <div class="big-text text-left">Строгость решает</div>
                 </section>
 
                 <section>
@@ -427,7 +423,7 @@ main =
     in putStrLn "Just exit!"
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Деления не было</span>
+                    <div class="big-text text-left">Деления не было</div>
                 </section>
 
                 <section>
@@ -435,9 +431,9 @@ main =
 div 2 0
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text"><span class="minus-color">Невыполненное</span> (отложенное) выражение</span>
+                    <div class="big-text text-left"><span class="minus-color">Невыполненное</span> (отложенное) выражение</div>
                     <div class="english-separator"></div>
-                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="minus-color">unevaluated</span> expression <span class="small-text">или</span> thunk</span>/</div>
+                    <div class="fragment big-text text-left">/<span class="small-text">англ.</span> <span class="minus-color">unevaluated</span> expression <span class="small-text">или</span> thunk</span>/</div>
                 </section>
 
                 <section>
@@ -458,7 +454,7 @@ f []     c = c
 f (_:xs) c = f xs $ c + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Пустышка с большой проблемой</span>
+                    <div class="big-text text-left">Пустышка с большой проблемой</div>
                 </section>
 
                 <section>
@@ -466,7 +462,7 @@ f (_:xs) c = f xs $ c + 1
 f  [1,2,3]   0
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Применяем...</span>
+                    <div class="big-text text-left">Применяем&hellip;</div>
                 </section>
 
                 <section>
@@ -474,7 +470,7 @@ f  [1,2,3]   0
 f  1:[2,3]   0 + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Первый шаг...</span>
+                    <div class="big-text text-left">Первый шаг&hellip;</div>
                 </section>
 
                 <section>
@@ -482,7 +478,7 @@ f  1:[2,3]   0 + 1
 f  1:2:[3]   (0 + 1) + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Второй шаг...</span>
+                    <div class="big-text text-left">Второй шаг&hellip;</div>
                 </section>
 
                 <section>
@@ -490,7 +486,7 @@ f  1:2:[3]   (0 + 1) + 1
 f  1:2:3:[]  ((0 + 1) + 1) + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Третий шаг...</span>
+                    <div class="big-text text-left">Третий шаг&hellip;</div>
                 </section>
 
                 <section>
@@ -498,7 +494,7 @@ f  1:2:3:[]  ((0 + 1) + 1) + 1
 f  []        ((0 + 1) + 1) + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Последний шаг...</span>
+                    <div class="big-text text-left">Последний шаг&hellip;</div>
                 </section>
 
                 <section>
@@ -506,11 +502,11 @@ f  []        ((0 + 1) + 1) + 1
 ((0 + 1) + 1) + 1 = 3
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Результат</span>
+                    <div class="big-text text-left">Готово</div>
                 </section>
 
                 <section>
-                    <h3>Ленивый вариант</h3>
+                    <h3 class="text-left">Ленивый вариант</h3>
                     <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code-small" data-trim>
 main :: IO ()
@@ -527,21 +523,21 @@ main =
 
                 <section>
                     <pre><code class="haskell src-code-small" data-trim>
-f :: Num b => [a] -> b -> b
-f []     c = c
-f (_:xs) c = f xs $! c + 1
+f' :: Num b => [a] -> b -> b
+f' []     c = c
+f' (_:xs) c = f xs $! c + 1
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <span class="big-text">Пустышка без проблем</span>
+                    <div class="big-text text-left">Пустышка без проблем</div>
                 </section>
 
                 <section>
-                    <h3>Строгий вариант</h3>
+                    <h3 class="text-left">Строгий вариант</h3>
                     <div class="above-src-code-separator"></div>
                     <pre><code class="haskell src-code-small" data-trim>
 main :: IO ()
 main =
-    let v = f [1..50000000] (0 :: Integer)
+    let v = f' [1..50000000] (0 :: Integer)
     in print v
                     </code></pre>
                     <div class="under-src-code-separator"></div>

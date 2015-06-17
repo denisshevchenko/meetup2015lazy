@@ -21,7 +21,7 @@
 .meetup-mark {
     font-family: 'Menlo', monospace !important;
     text-align: left !important;
-    font-size: 80% !important;
+    font-size: 70% !important;
     padding-top: 70px !important;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .my-site {
-    font-size: 34px !important;
+    font-size: 32px !important;
     font-family: 'Menlo', monospace !important;
 }
 
@@ -145,7 +145,9 @@
 }
 
 .intro-quote {
+    text-align: left !important;
     font-size: 90px !important;
+    padding-left: 80px !important;
     padding-bottom: 30px !important;
     font-family: 'Savoye LET', 'PT Sans' !important;
 }
@@ -212,5 +214,10 @@
 
 .minus-color {
     color: #542437 !important;
+}
+
+.text-left {
+    text-align: left !important;
+    padding-left: 44px !important;
 }
 
