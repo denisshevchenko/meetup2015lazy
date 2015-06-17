@@ -110,37 +110,13 @@ head [15, 2, 6]
 
                 <section>
                     <h3>Запуск Haskell-программы &mdash;</h3>
-                    <div class="big-text">начало <span class="red-text">выполнения</span> её выражений</div>
+                    <div class="big-text">начало <span class="red-text">вычисления</span> её выражений</div>
                     <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span>/</div>
                 </section>
 
                 <section>
-                    <h3><span class="red-text">Выполнение</span>,</h3>
-                    <h3>а не вычисление</h3>
-                    <div class="english-separator"></div>
-                    <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">evaluation</span> <span class="small-text">vs</span> calculation/</div>
-                </section>
-
-                <section>
-                    <pre><code class="haskell src-code" data-trim>
-let coordX = 12.3 + 0.068
-                    </code></pre>
-                    <div class="under-src-code-separator"></div>
-                    <div class="big-text text-left">Вычисление? Несомненно!</div>
-                </section>
-
-                <section>
-                    <pre><code class="haskell src-code" data-trim>
-let repoPath = "/home/dsh" &lt;/&gt;
-               "meetup2015"
-                    </code></pre>
-                    <div class="under-src-code-separator"></div>
-                    <div class="big-text text-left">А это? Хм&hellip;</div>
-                </section>
-
-                <section>
-                    <h3>Выполнить выражение &mdash;</h3>
+                    <h3>Вычислить выражение &mdash;</h3>
                     <div class="big-text">значит <span class="red-text">сократить</span> его</div>
                     <div class="english-separator"></div>
                     <div class="fragment big-text">/<span class="small-text">англ.</span> <span class="red-text">reduce</span>/</div>
@@ -431,7 +407,7 @@ main =
 2 `div` 0
                     </code></pre>
                     <div class="under-src-code-separator"></div>
-                    <div class="big-text text-left"><span class="minus-color">Невыполненное</span> (отложенное) выражение</div>
+                    <div class="big-text text-left"><span class="minus-color">Невычисленное</span> (отложенное) выражение</div>
                     <div class="english-separator"></div>
                     <div class="fragment big-text text-left">/<span class="small-text">англ.</span> <span class="minus-color">unevaluated</span> expression <span class="small-text">или</span> thunk</span>/</div>
                 </section>
