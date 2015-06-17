@@ -157,7 +157,7 @@
     font-size: 90px !important;
     padding-left: 80px !important;
     padding-bottom: 30px !important;
-    font-family: 'Savoye LET', 'PT Sans' !important;
+    font-family: 'Savoye LET', 'PT Sans', sans-serif !important;
 }
 
 .big-text {
@@ -193,7 +193,7 @@
 }
 
 .thank-you-cap {
-    font-family: 'American Typewriter', 'PT Sans' !important;
+    font-family: 'American Typewriter', 'PT Sans', sans-serif !important;
     font-size: 60px !important;
     color: #aaa !important;
 }
