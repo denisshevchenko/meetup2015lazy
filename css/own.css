@@ -19,8 +19,10 @@
 }
 
 .meetup-mark {
-    font-size: 32px !important;
-    padding-top: 50px !important;
+    font-family: 'Menlo', monospace !important;
+    text-align: left !important;
+    font-size: 80% !important;
+    padding-top: 70px !important;
 }
 
 .above-src-code-separator {
@@ -96,12 +98,20 @@
     /* padding-bottom: 30px !important; */
 }
 
-.src-code-number {
-    color: #2EB3BA !important;
+.src-code-keyword {
+    color: #d53584 !important;
 }
 
-.src-code-text {
-    color: #E1251C !important;
+.src-code-number {
+    color: #29a199 !important;
+}
+
+.src-code-type {
+    color: #a58f2a !important;
+}
+
+.src-code-function {
+    color: #2590d8 !important;
 }
 
 .my-site {
