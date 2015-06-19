@@ -46,8 +46,7 @@
                     <h1>Ленивые вычисления:</h1>
                     <h3>плюсы и минусы</h3>
                     <div class="meetup-mark">
-                        <strong><span class="src-code-keyword">let</span></strong> event = <span class="src-code-type">RuHaskell.Meetup</span> <span class="src-code-number">2015</span> <span class="src-code-type">Summer</span><br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;date&nbsp; = <span class="src-code-function">fromGregorian</span> <span class="src-code-number">2015</span> <span class="src-code-number">06</span> <span class="src-code-number">21</span>
+                        (<span class="src-code-type">RuHaskell.Meetup</span> <span class="src-code-number">2015</span> <span class="src-code-type">Summer</span>, <span class="src-code-function">fromGregorian</span> <span class="src-code-number">2015</span> <span class="src-code-number">06</span> <span class="src-code-number">21</span>)
                     </div>
                 </section>
 
@@ -384,11 +383,17 @@ main = do
                 <section>
                     <h3>Memory Leak &mdash;</h3>
                     <div class="big-text">низкоуровневая ошибка<br/>управления памятью</div>
+                    <div class="memory-error-sign">
+                        <i class="fa fa-cogs"></i>
+                    </div>
                 </section>
 
                 <section>
                     <h3>Space Leak &mdash;</h3>
                     <div class="big-text">высокоуровневая ошибка<br/>проектирования</div>
+                    <div class="memory-error-sign">
+                        <i class="fa fa-binoculars"></i>
+                    </div>
                 </section>
 
                 <section>
@@ -421,6 +426,9 @@ main =
 
                 <section>
                     <h3>Проблема в их количестве!</h3>
+                    <div class="quantity-sign">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
                 </section>
 
                 <section>

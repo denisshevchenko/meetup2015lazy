@@ -21,10 +21,9 @@
 
 .meetup-mark {
     font-family: 'Menlo', monospace !important;
-    text-align: left !important;
-    font-size: 70% !important;
+    text-align: center !important;
+    font-size: 65% !important;
     padding-top: 70px !important;
-    padding-left: 85px !important;
 }
 
 .above-src-code-separator {
@@ -201,12 +200,12 @@
 }
 
 .stat-clock-icon {
-    color: #888 !important;
+    color: #aaa !important;
     padding-right: 14px !important;
 }
 
 .stat-memory-icon {
-    color: #888 !important;
+    color: #aaa !important;
 }
 
 .stat-wrapper {
@@ -247,5 +246,17 @@
     font-family: 'Menlo'. monospace !important;
     color: #eee !important;
     font-size: 90% !important;
+}
+
+.memory-error-sign {
+    padding-top: 40px !important;
+    font-size: 100px !important;
+    color: #aaa !important;
+}
+
+.quantity-sign {
+    padding-top: 40px !important;
+    font-size: 150px !important;
+    color: #aaa !important;
 }
 
