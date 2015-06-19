@@ -536,6 +536,25 @@ main =
                     <div class="big-text">Если код может раздуться,<br/>разбавьте лень строгостью</div>
                 </section>
 
+                <!-- Итоги -->
+
+                <section>
+                    <h2>Лень</h2>
+                    <div class="above-src-code-separator"></div>
+                    <pre><code class="haskell src-code-small" data-trim>
+main :: IO ()
+main =
+    print $ Laziness good bad
+    where good = [ "Рациональность"
+                 , "Бесконечность"
+                 , "DSL"
+                 ]
+          bad  = [ "Неожиданное поведение"
+                 , "Space Leak"
+                 ]
+                    </code></pre>
+                </section>
+
                 <!-- Благодарю за внимание! -->
 
                 <section>
